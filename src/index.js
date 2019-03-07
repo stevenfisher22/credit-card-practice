@@ -3,12 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 // CREDIT CARD MAIN COMPONENT
-function App() {
+function CreditCard() {
     return (
-        <div>
-            Test
+        <div className="creditCard">
+            <div className="bankName">
+                <BankName />
+            </div>
         </div>
     )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const BankName = () => {
+    return (
+        <div>
+            Big Bank, Inc.
+        </div>
+    )
+}
+
+ReactDOM.render(<CreditCard />, document.getElementById('root'))
