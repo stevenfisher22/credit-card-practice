@@ -6,17 +6,42 @@ import './index.css';
 function CreditCard() {
     return (
         <div className="creditCard">
-            <div className="bankName">
-                <BankName />
-            </div>
+            <BankName />
+            <CardNum />
+            <ExpDate />
+            <CustName />
         </div>
     )
 }
 
 const BankName = () => {
     return (
-        <div>
+        <div className="bankName">
             Big Bank, Inc.
+        </div>
+    )
+}
+
+const CardNum = () => {
+    return (
+        <div className="cardNum">
+            1234 5678 9876 5432
+        </div>
+    )
+}
+
+const ExpDate = () => {
+    return (
+        <div className="expDate">
+            08/19
+        </div>
+    )
+}
+
+const CustName = () => {
+    return (
+        <div className="custName">
+            CARDHOLDER NAME
         </div>
     )
 }

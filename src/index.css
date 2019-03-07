@@ -1,15 +1,43 @@
 .creditCard {
-  border: 2px solid #ccc;
+  border: 2px solid #393E41;
+  background-color: #3F88C5;
   width: 350px;
   height: 200px;
   border-radius: 10px;
   padding: 10px;
   display: flex;
   font-family: "Helvetica", arial, sans-serif;
+  color: #F6F7EB;
 }
 .bankName {
   position: relative;
-  font-size: 25px;
+  min-width: 250px;
+  height: 50px;
+  font-size: 35px;
   font-weight: bold;
-  left: 180px;
+  left: 100px;
+  top: 5px;
+}
+.cardNum {
+  position: relative;
+  min-width: 250px;
+  height: 50px;
+  font-size: 25px;
+  top: 100px;
+  right: 240px;
+}
+.expDate {
+  position: relative;
+  min-width: 50px;
+  height: 25px;
+  top: 140px;
+  right: 286px;
+}
+.custName {
+  position: relative;
+  min-width: 225px;
+  height: 25px;
+  font-size: 20px;
+  top: 175px;
+  right: 535px;
 }
