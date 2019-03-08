@@ -20,7 +20,7 @@
 }
 .cardNum {
   position: relative;
-  min-width: 250px;
+  min-width: 300px;
   height: 50px;
   font-size: 25px;
   top: 100px;
@@ -28,16 +28,21 @@
 }
 .expDate {
   position: relative;
-  min-width: 50px;
+  min-width: 125px;
   height: 25px;
   top: 140px;
-  right: 286px;
+  right: 394px;
+}
+.expDate::before {
+  content: 'Valid Thru';
+  padding-right: 0.4em;
+  font-size: 12px;
 }
 .custName {
   position: relative;
   min-width: 225px;
   height: 25px;
   font-size: 20px;
-  top: 175px;
-  right: 535px;
+  top: 172px;
+  right: 661px;
 }

@@ -3,47 +3,59 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 // CREDIT CARD MAIN COMPONENT
-function CreditCard() {
+function CreditCard({cardInfo, bank}) {
+    // const cardInfo = props.cardInfo;
+    // const bank = props.bank;
     return (
         <div className="creditCard">
-            <BankName />
-            <CardNum />
-            <ExpDate />
-            <CustName />
+            <BankName bank={bank.bankName}/>
+            <CardNum cardNum={cardInfo.cardNum}/>
+            <ExpDate expDate={cardInfo.expDate}/>
+            <CustName name={cardInfo.name}/>
         </div>
     )
 }
 
-const BankName = () => {
+const BankName = (props) => {
     return (
         <div className="bankName">
-            Big Bank, Inc.
+            {props.bank}
         </div>
     )
 }
 
-const CardNum = () => {
+const CardNum = (props) => {
     return (
         <div className="cardNum">
-            1234 5678 9876 5432
+            {props.cardNum}
         </div>
     )
 }
 
-const ExpDate = () => {
+const ExpDate = (props) => {
     return (
         <div className="expDate">
-            08/19
+            {props.expDate}
         </div>
     )
 }
 
-const CustName = () => {
+const CustName = (props) => {
     return (
         <div className="custName">
-            CARDHOLDER NAME
+            {props.name}
         </div>
     )
 }
 
-ReactDOM.render(<CreditCard />, document.getElementById('root'))
+var cardInfo = {
+    name: 'Steven M Fisher',
+    cardNum: '1234 5678 9876 5432',
+    expDate: '08/19',
+}
+
+var bank = {
+    bankName: 'Big Bank, Inc.'
+}
+
+ReactDOM.render(<CreditCard cardInfo={cardInfo} bank={bank}/>, document.getElementById('root'))
